@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="I'm Anajli kumari. I am looking for a Frontend Developer role to showcase my skills and work,
+		 while transitioning from my current Full Stack Web Development position">
+	<meta name="theme-color" content="#2196f3" />
+	<title>Portfolio</title>
+	<link rel="shortcut icon" type="image/ico" href="images&icons/anjali.png">
+	<link rel="icon" type="image/ico" href="images&icons/anjali.png">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Oswald&family=Raleway:ital,wght@0,400;0,500;0,700;1,400&display=swap"
+		rel="stylesheet">
+
+	<link id="theme" rel="stylesheet" href="light-theme.css">
+
+	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"
+		integrity="sha512-CEiA+78TpP9KAIPzqBvxUv8hy41jyI3f2uHi7DGp/Y/Ka973qgSdybNegWFciqh6GrN2UePx2KkflnQUbUhNIA=="
+		crossorigin="anonymous"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
+
+	<script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
+
+	<link rel="stylesheet" type="text/css" href="loader.css">
+
+	<style type="text/css">
+
+
+	</style>
+	<script>
+
+		//adding preloader css animation
+		var count = 0;
+		var counter = setInterval(() => {
+			if (count < 101) {
+				$('.count').text(count + '%');
+				$('.loader').css('width', count + '%');
+				count++
+			} else {
+				clearInterval(counter)
+			}
+		});
+		$(document).ready(function () {
+			////start// For automatically switching between dark & light theme on basis of system color scheme////
+			const themeStylesheet = document.getElementById('theme');
+			const themeToggle = document.getElementById('theme-toggle');
+
+			if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+				themeStylesheet.href = 'dark-theme.css';
+				themeToggle.innerText = 'Light';
+			} else {
+				themeStylesheet.href = 'light-theme.css';
+				themeToggle.innerText = 'Dark';
+			}
+
+			///End////
+		});
+		//for nightmode/lightmode switching....
+
+		document.addEventListener('DOMContentLoaded', () => {
+
+
+
+			const themeStylesheet = document.getElementById('theme');
+			const themeToggle = document.getElementById('theme-toggle');
+			themeToggle.addEventListener('click', () => {
+				// if it's light -> go dark
+				if (themeStylesheet.href.includes('light')) {
+					themeStylesheet.href = 'dark-theme.css';
+					themeToggle.innerText = 'Light';
+				} else {
+					// if it's dark -> go light
+					themeStylesheet.href = 'light-theme.css';
+					themeToggle.innerText = 'Dark';
+				}
+			})
+
+			//Get the button
+			var mybutton = document.getElementById("scrolltotop");
+
+			// When the user scrolls down 20px from the top of the document, show the button
+			window.onscroll = function () { scrollFunction() };
+
+			function scrollFunction() {
+				if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+					mybutton.style.display = "block";
+				} else {
+					mybutton.style.display = "none";
+				}
+			}
+
+			// When the user clicks on the button, scroll to the top of the document
+			$('#scrolltotop').on('click', () => {
+				document.body.scrollTop = 0;
+				document.documentElement.scrollTop = 0;
+			})
+
+
+
+		})
+		document.addEventListener('DOMContentLoaded', () => {
+
+			//for nav links for mobile....
+			const linefornav = document.getElementById("linefornav");
+			const navlinks = document.getElementById("nav-links");
+			const links = document.getElementById("nav-links li");
+			const line1 = document.getElementById("line1");
+
+			linefornav.addEventListener('click', () => {
+				navlinks.classList.toggle("open");
+				linefornav.classList.toggle("cross");
+
+			});
+
+			$('#nav-links li a').on('click', () => {
+				$('#nav-links').toggleClass("open");
+				$(".linefornav").toggleClass("cross");
+			});
+
+
+		});
+
+
+		//adding animation effect to the page
+		$(document).ready(function () {
+			$('.heading-part1').waypoint(function (direction) {
+				$('.heading-part1').addClass('animate__fadeInDown')
+			}, { offset: '100%' })
+		});
+		$(document).ready(function () {
+			$('.heading-part2').waypoint(function (direction) {
+				$('.heading-part2').addClass('animate__fadeInUp')
+			}, { offset: '100%' })
+		});
+		$(document).ready(function () {
+			$('.knowmore').waypoint(function (direction) {
+				$('.knowmore').addClass('animate__fadeIn')
+			}, { offset: '100%' })
+		});
+		$(document).ready(function () {
+			$('.about-part1').waypoint((direction) => {
+				$('.about-part1').addClass('animate__fadeInRightBig')
+			}, { offset: '50%' })
+		});
+
+		$(document).ready(function () {
+			$('.about-part2').waypoint(function (direction) {
+				$('.about-part2').addClass('animate__fadeInLeftBig')
+			}, { offset: '50%' })
+		});
+		$(document).ready(function () {
+			$('.tl-part1').waypoint(function (direction) {
+				$('.tl-part1').addClass('animate__fadeInLeft')
+			}, { offset: '50%' })
+		});
+		$(document).ready(function () {
+			$('.tl-partp').waypoint(function (direction) {
+				$('.tl-partp').addClass('animate__fadeInUp')
+			}, { offset: '50%' })
+		});
+		$(document).ready(function () {
+			$('.tl-part2').waypoint(function (direction) {
+				$('.tl-part2').addClass('animate__fadeInRight')
+			}, { offset: '50%' })
+		});
+		$(document).ready(function () {
+			$('.skills-part1').waypoint(function (direction) {
+				$('.skills-part1').addClass('animate__fadeInUp')
+			}, { offset: '50%' })
+		});
+		$(document).ready(function () {
+			$('.skills-part2').waypoint(function (direction) {
+				$('.skills-part2').addClass('animate__fadeInUp')
+			}, { offset: '50%' })
+		});
+		$(document).ready(function () {
+			$('.fw-part1').waypoint(function (direction) {
+				$('.fw-part1').addClass('animate__fadeInUp')
+			}, { offset: '50%' })
+		});
+		$(document).ready(function () {
+			$('.fw-part2').waypoint(function (direction) {
+				$('.fw-part2').addClass('animate__fadeInUp')
+			}, { offset: '50%' })
+		});
+		$(document).ready(function () {
+			$('.port-part1').waypoint(function (direction) {
+				$('.port-part1').addClass('animate__fadeInUp')
+			}, { offset: '50%' })
+		});
+		$(document).ready(function () {
+			$('.port-part2').waypoint(function (direction) {
+				$('.port-part2').addClass('animate__fadeInUp')
+			}, { offset: '50%' })
+		});
+		$(document).ready(function () {
+			$('.cont-part1').waypoint(function (direction) {
+				$('.cont-part1').addClass('animate__fadeInLeftBig')
+			}, { offset: '60%' })
+		});
+		$(document).ready(function () {
+			$('.cont-part2').waypoint(function (direction) {
+				$('.cont-part2').addClass('animate__fadeInRightBig')
+			}, { offset: '60%' })
+		});
+		$(document).ready(function () {
+			$('.cv-part1').waypoint(function (direction) {
+				$('.cv-part1').addClass('animate__fadeInDown')
+			}, { offset: '50%' })
+		});
+		$(document).ready(function () {
+			$('.sm-part1').waypoint(function (direction) {
+				$('.sm-part1').addClass('animate__bounceIn')
+			}, { offset: '80%' })
+		});
+		$(document).ready(function () {
+			$('.sm-part2').waypoint(function (direction) {
+				$('.sm-part2').addClass('animate__fadeInUp')
+			}, { offset: '90%' })
+		});
+
+
+
+	</script>
+
+	<style>
+
+
+	</style>
+</head>
+
+<body id="top">
+	<!-- ********HEADER***************-->
+
+	<div class="wrapper">
+		<section>
+			<div class="loader"></div>
+			<div class="count"></div>
+		</section>
+	</div>
+
+
+
+	<nav>
+		<div class="linefornav" id="linefornav">
+
+
+			<span></span>
+			<span></span>
+			<span></span>
+
+		</div>
+
+		<ul class="nav-links" id="nav-links">
+			<li>
+				<p>Mode : <button id="theme-toggle">Dark</button></p>
+			</li>
+			<li>
+				<h2><a id="logoicon" href="#top"><img style="width: 60px;height: 60px;" src="images&icons/anjali.png"
+							alt="anjali "></a></h2>
+			</li>
+
+			<li><a href="#top"> Home</a></li>
+			<li><a href="#about"> About Me</a></li>
+			<li><a href="#Skills"> Skills</a></li>
+			<li><a href="#portfolio"> Portfolio</a></li>
+			<li><a href="#contact"> Contact Me</a></li>
+
+		</ul>
+
+	</nav>
+
+	<!--</div>-->
+
+
+	<!-- HOMEPAGE-->
+	<div id="hero">
+		<div class="background-image"></div>
+		<h1 class="heading-part1 animate__animated">Hello, I'm Anjali Kumari</h1>
+		<h3 class="heading-part2 animate__animated">
+			I'm passionate about Full Stack Web Development, especially Frontend development, and I have programming
+			skills in C, C++, Java, and more.
+			.</h3>
+		<a href="#about" style="font-family: 'Josefin Sans', sans-serif;" class="btn knowmore animate__animated ">Know
+			More</a>
+
+		<p id="scrolltotop" title="Go to top">Scroll to Top</p>
+
+
+	</div>
+	<!--About-->
+	<div id="about" class="about">
+		<h3 class="title">About Me</h3>
+		<div id="two-cols">
+			<div class="about-image about-part1 animate__animated"><img style="border-radius: 50%;"
+					src="images&icons/re.jpeg" alt="Anjali kumari"></div>
+			<div class="about-bio about-part2 animate__animated">
+				<p>
+					I’m Anjali Kumari, currently pursuing a B.Tech in Computer Science and Engineering
+					from Poornima Institute of Engineering and Technology. I’m passionate about Full Stack Web
+					Development,
+					especially Frontend development. In addition to my expertise in WordPress, I have solid programming
+					skills in C, C++,
+					Java, and other languages.
+					My goal is to leverage these skills to create impactful and innovative web solutions
+				</p>
+			</div>
+			<p>&nbsp;</p>
+		</div>
+		<hr>
+	</div>
+	<!------Educational Timeline---------->
+	<p class="tl-partp animate__animated"
+		style="text-align: center; font-size: 20px;font-family: 'Josefin Sans', sans-serif;">Education Timeline</p>
+	<hr>
+	<div class="timeline">
+		<div class="container left tl-part1 animate__animated">
+			<div class="content">
+				<h2>2021 - 2025</h2>
+				<h3>B.Tech CSE</h3>
+				<p><b>CPI : 86.46</b><br>Poornima Instituete of Engineering & Technology.</p>
+			</div>
+		</div>
+		<div class="container right tl-part2 animate__animated">
+			<div class="content">
+				<h2>2018</h2>
+				<h3>12th - BSEB</h3>
+				<p><b>Percentage : 72.85%</b><br>Ganga Devei mahilla college Patna.</p>
+			</div>
+		</div>
+		<div class="container left tl-part1 animate__animated">
+			<div class="content">
+				<h2>2018</h2>
+				<h3>10th - CBSE</h3>
+				<p><b>Percentage : 68.00%</b><br>Vidya Bhawan Balika Vidyapith Lakhisarai.</p>
+			</div>
+		</div>
+	</div>
+	<hr>
+	<!-- Skills-->
+	<div id="Skills" class="Skills">
+		<h3 class="title">Skills</h3>
+		<p class="skills-part1 animate__animated" style="margin-bottom: 40px;">
+
+
+			Skilled in both front-end
+			and back-end technologies, experienced with C, C++, and Java. Strong in data structures and algorithms,
+			delivering efficient and innovative solutions for development and problem-solving.
+		</p>
+		<hr>
+		<ul class="grid skills-part2 animate__animated">
+			<li><i></i>
+				<h4 class="textskill">Front-End</h4>
+				<p>Passionate about designing website experiences using HTML, CSS, and JavaScript</p>
+			</li>
+			<li><i></i>
+				<h4 class="textskill">Back-End</h4>
+				<p>Worked with MongoDB for databases and Node.js for backend development</p>
+			</li>
+			<li><i></i>
+				<h4 class="textskill">Wordpress</h4>
+				<p>Proficient in WordPress for designing and managing websites effectively.</p>
+			</li>
+
+		</ul>
+	</div>
+	<hr>
+	<!--Frameworks worked with-->
+	<div class="framework">
+		<p style=" font-family: 'Josefin Sans', sans-serif;" class="fw-part1 animate__animated">Some technologies i have
+			experience working with :</p>
+		<hr>
+		<div class="fwimg fw-part2 animate__animated">
+			<img class="fwf" src="framework png's/ht5.png" alt="html">
+			<img class="fwf" src="framework png's/css.png" alt="css">
+			<img class="fwf"
+				src="data:image/png;base64,UklGRiANAABXRUJQVlA4TBQNAAAvf8AfECqs7v87myNp7v+m5gZmc9U55303742k3znnOU+dhhv+kqXJ8xbavMsaT0abXNhulRpZssw7o3wBbhWciCPNbC/BuMMNmI5U2EEaask4oId1XYHxZJRtmjbn5jUJbjAqyb6ByXmGdsCTYGtzYMabUwfLhTtIiybyapmVNvkKTCeZTuDGtdF0pB8tvDlN5p20qKGRVTLeiDvgSWYbql48LavZJnPjyZasSXSk9KKWZRm1NOECLBl34M0T3cg9SmiT0aTanINp9Q20wkDaNvev+ekkQABASJF1yLZtG5dt27Ztu8Y1xrjLts3NelvZ+xMgHzry+44gF2c+QRVb2WAV6r2HrydsUldp55LLR/OBQ12ryMWvFRvvzP6j8snoVHmXja5CvO9wTHpalXJGq/HeyHrPaNcKyiIymuhtLOgczzJIWof9ldo/+ioPOr8sOj2GrZlU+WmK/ak0lirdTNznA4cW2VzjlAGNP7qQfNih6oxmhjQyIzNro115NW4U0INcYtIIcuZh3N24o6fxpFwYRzU2qlSjUqkQi0a+jvcDhy7Vx5mstboaB2k0zk021Nig21g0BV6qWiTTiWhjlq3PMsyYjCUovkGcJZOZMu+g8XW/BJnJv5P2sxpFOnZxtmstwIkRPZ+oJYp3LlmzaRupZTT7vPsIjV7aO7Xc94pMfN81qHEJ3xxRByg/5vhJptNpsXGzd4/cNVQ5p10byMcsCa8ALI87niWgpUniDwjXSC1aqHxcantDE63bfEsmSZuV76CKiEZHRVyaTGTXWRYat28Ak4fyRqvW/x8SUCkBYySah4DxqxBCGsxqLWzM5SKZkUJrURecSciHgHJViOVyYAxLYD1X4xnIXBFfSes2KnkJWzYKYF0sWiVoeaFEJTnZ4jSAP5bQ20BuyrEog9AVTEyMyoHPZu87AgmurEAu21g2AJVFOJl7dZfRUZLwRg+YQmPR9uENKcicvW3aSrWkaNSAkRSLcQIL0tBF0qmzSuMrwciOar8UJtJtvCxIwSgELScWYw9ODLdf0YOtKp5wRil0j0VbhmnByuM2ronaiNk6cMDoYPeFZbH8Gpi8QpmRtBCvfpZBRi8BKnNlwwqlIeFOsWwHJwWqNiaJPfqKlMVSDzTKQ2mzMDGW34H7BppKNH53iYiYyXQCTc6BVsBFY9H5wGZhcpkT7zFerHr2ls7nBykoj2DiiyWXFhifgxw2zKJzF2cHsOUJIQ4m/lQsXcCfClB7MlGrEHe1MQXcNAtgUoIjJdb2KrhqgNnEDUoeMrof8KgAOj+4czTyP3CnZDojot6/8qxzGeyksjM5fdNLdW4fOdZk8y063Xx+jVCVjyvZfeEr45kNqz2ay2O91Tddb0/9s9qrJbB2t9go00WdMkVFmXko27BuPB8JA0SktPSf9li8dZEV9qza5qHLTzw4E2lohFxi8VwLWFZQr25tjLL+17QEs3CSfNZb4il8NsT/YIk0U0k8+ipMsWlt47jb1S/ya+tMn64MGaObXX3EkgPOmoL+l+/v2TeCob8zgCGNL9qZ5c6jqyXgW47TvoICakB9IpLFNToHHbxCtb5U22LSRuVw5XAzk+3n6KiUK2itk8A6NeA3V//UDV+tlz59bT+SZ71vLvEKc/DURUyo7XXppOaI1Wgn9pTg9wXeSaz/kUvzMua/epGcuVV7RSiPvk+RvurvQdkR50WJykQWbu6R0DTOIvIW7S+of/UgZ+ks29P6qco2es5bZhL9dWBZLLanrICqLklxJ+BKR2/iy3XG2y1ykWdfkEr2nZPp7td9aCZSvR5sYtNFE5dLmtkLgSaEbSHcWUSeMkRD3sNBal3jwuUj/X66f+0x1WLdEU621Cn3MKuUinQ9CwygGk5vApO/WAcvX9vB1n/KApmkV9HeqNVfS9wLgJeCvyYukJT14oED4VtIUgF3sIk0n3IVG3loQ5ArdNK+8jjxrT4AKkXkSsQJ4lsY/0lG38zzHrvJtbxO3xvqnyAiL4RB4tvev8VGY7cugMqb9ss/VxJ2wOS3SPZg6Pwxj+xbxtC52ad6iMoQWCkyrhFe7SXylMuNslD70JXoE2ktDm+WpJcCXleGEI1kcevgE+hbe5mCK9sMOv9YhpPksIYEIrkxaTMWjqxL8NyiZdXrJKDZOuxWfS84oMHVugETzs4csrSWJP+6+mjoI8nbh9cCR5xlEK98eCOJl89FfaZDCflSoFo4cV1xZj/DxHd3yULg64mfGkDkIaOAX+C1B3HEXAmaD28YKFcwq9rVn8k7y2N1Hfws0H7B/CyITDkr8Lke/1EFq3RUErgXWM1MxNm+IgCVBpf8DljHSuCXKSBs5vGrxP0k9FDX/IJrAUN27u5SEbc61jvLIKGkO/Ag1+1guoS/peMx4q4MQjN9lwx3fJIEnzMZLufImmCXFE60dcs8dgsz3CMf3nqWtknhpAOOddQS61Io9LPkMhTPEWH+ykNOsiyWFKfBzARdKWTm31vyafvMD/OnPlq6RRtPYyLcziHrwT+loKdA6waZx/QwpjCPJ7RaeFgKC2E71zowMwv3/Tb29lgW5g88ltHeJ5yOqgpmuHoC+wfbVwEd/5O5bhikpuTqu8jxrNGhMqWVJBt1VK6G9aDmuFAddN/MlRlrIfYQ9x50Dw9l8iSuFE9dEHDJ4DCnHwNnhXnVDtEpBlivr6vuWaB9glVvCbNVEdoO8nnLCOCsg4OcQrwesKdLKpPtIu77EvsDdwoysUh8rHgf1gQ84LQQl4TNSgOg3xxX+18nmSHu7RUQVstMuEiA5qm03rLaT3oXgW13LyQ6jjhNTgE+1iWF4UWfY4aIO/ttkmzbV64AfHkiMw5lldarvFqS7lQE8s6HJbkeHPMUKcyHUXUukZusvIetteOK4vkG4p+KPGU9eHSCkinmWbTeS0clyR9SZWFb5fuOwKuwN/ypiJgQwNU+Iq/ealmvr9zka58ivqUlUNNXRDqgX7tPZjJtof28fSXkrkdbyFss18E9nkx8vojIzwA/xivo5YhvFhEZCvwDV+FmI+jcsSRh+36/jazRSx/neBzMy6CrE67ylnQOPissKYGYrYNRbWvdpwedNTtJ8GxsjY0sasje1SLSfgA8QqyPBr4tnQnEl4nVFAA1bxHJTpvdRPeEcZLm4Ac5SB5pFExpfx3xOFvD2jDqkDR6ExeLfQcFJMnez79eCz1nvUHSvuEtXSQn6wfg7OK8GXBNFm7O3lB1iENuB/rv6DvyqGapgLdZ42Gf8PKCLVsM/IVwlcT9xVo4LJetMge+PdYtSQXNJ7jwWX5k052/cqAJMa4gf3xWqJkU6oaNcK9SoS43ZZ1vr/MOY8LaF55YkAqsIjb5z/ezj5r3wqsD17QHyUaPIapfudcoBuzx2PLopcLf5LEnJ/KtXdRvzIjzbrZmncXP+f7p/z3oILP1eQNu0cjwY2Z8aSZxHtIUrIJXvUWiPYmo9LRE0+Ovr/kvJHmleCbCEpFXmxAH9rl6fYUyvl3yR1XeU3YXkfOCzi+eL4A9xfnqXS/85o5vvZ36s9o0tBfzC99aeeCQpbuLuwO2i+cMMHm63P0tytVH9v/Ebxr4fa+/2ox9xp5iZpLLbpHlfyTxNDg5mvYq+NRkcn7gzJJ4Nj+YuIckvxbcozmW44hzAujgY4Bf6fM7xG6lAM1tJPnyWE6EFgl5qSpgT9dWxGEvl5A9oHcsXfDfQeQXLG1TbEOHWfpL0BfCUbFMhR8NI72A9YfAq1uIsyXsbFgWy2rYJFDpwcB7zRUp3Y6orD4lkJYIvWK5CEwMJINHAi/5lOz8xCPrJPDVYGUs3WBIKMkneFbgse8pjdj2XAn9ifDCWHrAHwSTh9SC8xck+E5wy1j2hinhZIbP9ST8t8BFonpyCqKX7jq0kMIVYE0sK+DX08j0pm36P5QkxXXhObHMh5ulMZDOPu0pLIeFsQyCo8Jly+ipIU8P91fQPZaFcM5gTzmU3uf9j2C7wcBYHguLQ9WdQav61U0tPHppoOxIWBDLdWGbLMyttqH1lvnw2n/UwqpfCFMeK3F0LHXApSGeUkn7ypJItr+FfFA+vBBdsEKiXQGPDnDaPNqvVxDMZdtm4TN/PcAZ0CueSqhvSDJ6R9rP+i3ifPIdLeR9/yPJFGLveFRCwE/yy4e3/yLa5+XjOtOheE56sI3K1SYNXtVnwAHN8cidofEhHmWx/E4NnT96lkHEu/nRCmgh6x+7gyv7K+Jyifg2wGL38uhF5Ck3XP+8dI+8lSQe/0wbWZz+kftmItmlfoY4OR9eTPIgILnNklWN9CxO1cElYMPURhsuutfJ69E+TaLe3QBsCb//MAl8qUEevjtK5JN+KtniK0n47GvPm2x1c2yy+3396u/zckk3u+rqNq/OtxVkLXDX+25jKY749P2apQI+4Rc2PdK2auofy1pkts+Tv3a8GUdJKm42acrNnrrfIZl8qMg="
+				alt="react">
+			<img class="fwf" src="framework png's/node.png" alt="node js">
+			<img class="fwf" src="framework png's/express.png" alt="express js">
+			<img class="fwf" src="framework png's/mongodb.png" alt="MongoDB">
+			<img class="fwf" src="framework png's/js.png" alt="Javascript">
+			<img class="fwf" src="framework png's/pytho.webp" alt="python">
+			<img class="fwf" src="framework png's/java.png" alt="java">
+			<img class="fwf" src="framework png's/vs.png" alt="vs code">
+			<img class="fwf" src="framework png's/git.png" alt="github">
+		</div>
+	</div>
+	<hr>
+	<!--Portfolio-->
+	<div id="portfolio" class="portfolio">
+		<h3 class="title">Portfolio</h3>
+		<p class="port-part1 animate__animated">
+			Take a look at my Featured works.
+		</p>
+		<hr>
+		<ul style="justify-content: center;" class="grid port-part2 animate__animated">
+			<li class="large" style="background-image: url('images&icons/final.jpeg');">
+				<p id="po">Online food-ordering system <br>Efficient digital food ordering platform offering intuitive
+					design and quick service</p>
+				<p id="lo">Online food-ordering system<br>An URL shortener reduces the length of your URL, in order to make the address
+					something that's easier to remember and track. So its very easy to share url after shortening.
+				</p><a href="https://github.com/Anjalikumari22/Food-Ordering-System" class="btn" id="btnopen">Open</a>
+			</li>
+
+			<li class="large" style="background-image: url('images&icons/clone.png');">
+				<p id="po">Netflix clone<br>A Netflix project includes features like user profiles, personalized
+					recommendations, streaming options,
+					content library browsing, and multi-device accessibility</p>
+				<p id="lo">Netflix clone<br>A Netflix clone project built using HTML and CSS, featuring a responsive
+					design,
+					user interface, content browsing, and basic streaming layout</p><a id="btnopen" href="#about"
+					class="btn">Open</a>
+			</li>
+
+			<li class="large" style="background-image: url('images&icons/list.jpeg');">
+				<p id="po">TODO-List<br>Manage tasks, create/edit/delete items, set priorities, track deadlines, and
+					enjoy a responsive user interface</p>
+				<p id="lo">TODO-List<br>Organize tasks, add/edit/delete entries, prioritize, set deadlines,
+					and experience a responsive design, developed using HTML, CSS, and JavaScript.</p><a
+					href="https://github.com/Anjalikumari22/TODO-List" class="btn" id="btnopen">Open</a>
+			</li>
+
+			<li class="large" style="background-image: url('images&icons/covid.jpg');">
+				<p id="po">COVID statistics <br>COVID statistics: Track confirmed cases, active cases, recoveries, and
+					deaths by country for real-time updates</p>
+				<p id="lo">COVID statistics <br>This COVID statistics project, built using HTML, CSS, and JavaScript,
+					provides real-time tracking of confirmed cases, active cases,
+					recoveries, and deaths by country, offering users up-to-date information.</p><a
+					href="https://github.com/Anjalikumari22/Covid-Statistics" class="btn" id="btnopen">Open</a>
+			</li>
+		</ul>
+	</div>
+	<hr>
+
+	<!-- CONTACT-->
+	<div>
+		<h3 class="title">Contact Me</h3>
+	</div>
+	<hr>
+	<div id="contact">
+		<ul class="grid">
+			<li style="font-family: 'Josefin Sans', sans-serif;" class="cont-part1 animate__animated">
+			</li>
+
+
+			<body>
+				<div class="contact-container">
+					<form id="contactForm" class="contact-form"method="POST">
+					<h1>Contact Us</h1>
+					<!-- <form  class="contact-form" method="post" action="send_email.php"> -->
+
+						<label for="name">Name:</label>
+						<input type="text" id="name" name="name" placeholder="Your Name" required>
+
+						<label for="email">Email:</label>
+						<input type="email" id="email" name="email" placeholder="Your Email" required>
+
+						<label for="message">Message:</label>
+						<textarea id="message" name="message" placeholder="Your Message" required></textarea>
+
+						<button type="submit" class="btn">Send Message</button>
+					</form>
+				</div>
+				<script src="js/script.js"></script>
+			</body>
+
+
+			<li class="cont-part2 animate__animated">
+			</li>
+		</ul>
+	</div>
+	<hr>
+
+
+	<!-- FOOTER-->
+	<div class="cv-part1 animate__animated" style="text-align: center;">
+		<a href="https://drive.google.com/file/d/1qdLhqLRiviAJ50QB3EapDWmrN3r-drMB/view?usp=sharing"
+			download="Anjali-kumari-CV" target="_blank" class="btn cv-part1 animate__animated"
+			style="font-family: 'Josefin Sans', sans-serif;" id="cv">Download
+			CV</a>
+	</div>
+
+	<hr>
+	<div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark"
+		data-type="HORIZONTAL" data-vanity="anjali-kumari-16704a242" data-version="v1"><a
+			class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/anjali-kumari-16704a242/">Anjali
+			kumari</a></div>
+
+
+
+	<!-- FOOTER-->
+	<footer id="social-media">
+		<ul class="sm-part1 animate__animated">
+			<li><a href="https://x.com/nam_anjali9743" target="_blank"><i class="fab fa-twitter"></i></a>
+			</li>
+			<li><a href="https://www.instagram.com/anjalisingh30520/" target="_blank"><i
+						class="fab fa-instagram"></i></a></li>
+			<li><a href="https://www.linkedin.com/in/anjali-kumari-16704a242/" target="_blank"><i
+						class="fab fa-linkedin"></i></a></li>
+			<li><a href="https://github.com/Anjalikumari22" target="_blank"><i class="fab fa-github"></i></a></li>
+			<li><a href="nam.anjalikumari@.com?subject=Hello, I'm ...&body=I have a job for you...." target="_blank"><i
+						class="far fa-envelope"></i></a></li>
+		</ul>
+		<p class="sm-part2 animate__animated">Thank you for visiting !</p>
+		<p class="sm-part2 animate__animated">&ldquo; Believe In Yourself &rdquo;</p>
+		<p class="sm-part2 animate__animated">Copyright &copy;
+			<script>document.write(new Date().getFullYear());</script> Made with <span style="color: red"
+				class="heart">❤</span> by Anjali kumari
+		</p>
+	</footer>
+
+
+</body>
+
+</html>
