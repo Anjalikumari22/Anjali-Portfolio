@@ -24,7 +24,8 @@ const mongoose = require("mongoose");
 require('dotenv').config();  // Ensure this is loaded
 
 // const URI = process.env.MONGO_URI;
-const URI = 'mongodb+srv://anishu2001:NFpKIJvaDV7qpBl6@cluster0.4dlpz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
+const URI = 'mongodb+srv://anjali123:IR6Fc2a3DVqB5BNb@cluster0.mt6zy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
+// const URI = 'mongodb+srv://anishu2001:NFpKIJvaDV7qpBl6@cluster0.4dlpz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
 
 
 console.log("Mongo URI:", URI);  // Add this line for debugging
